@@ -1,6 +1,8 @@
 ################
 """
-Create a dataset ready for analysis.
+Construct initial dataset.
+
+Change values PATH and PATHOUT to location of Hansard dataset and output file, respectively.
 
 Tested working with:
   python 3.10.4
@@ -14,7 +16,7 @@ import pandas as pd
 print("Importing data...")
 
 # Import required data and set datatypes
-datapath = r'C:\Users\btyr\Nextcloud\Documents\University\Thesis\Data\Polarisation\script\hansard-speeches-v310.csv'
+datapath = r'PATH'
 cols = ['speech', 'party', 'constituency', 'year', 'date']
 datatypes = {'speech': 'string', 'party': 'string', 'constituency': 'string', 'year': int}
 df = pd.read_csv(datapath, usecols=cols, dtype=datatypes, parse_dates=['date'])
@@ -78,7 +80,7 @@ print("Variables cleaned.\n")
 ######### Export data to csv
 print("Exporting data...")
 
-df.to_csv(r'C:\Users\btyr\Nextcloud\Documents\University\Thesis\Data\Polarisation\script\hansard-cleaned.csv', index=False)
+df.to_csv(r'PATHOUT', index=False)
 
 print("Data exported.\n")
 #########
