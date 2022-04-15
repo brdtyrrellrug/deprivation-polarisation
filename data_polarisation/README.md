@@ -11,3 +11,5 @@ Recommended:
 Instructions:
 
 Run scripts in order 01_x, 02_x, ... and change variables as directed within them (these are paths).
+
+The constituency to nuts2 conversion table can be found here: https://github.com/brdtyrrellrug/constituency2nuts2
