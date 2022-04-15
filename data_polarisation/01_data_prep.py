@@ -53,14 +53,19 @@ print("Variables and records dropped.\n")
 ######### Clean variables
 print("Cleaning variables...")
 
-# Strip all non-alphabetic characters from variable var and set to lower case
-def strip(var):
+# Strip all uncommon characters and numbers from variable var
+def denumerise(var):
+
+    df[var] = df[var].str.replace('[^a-zA-Z,.!? ]', '', regex=True)
+
+# Set variable var to lower case and remove all non-alphanumeric characters
+def declutter(var):
 
     df[var] = df[var].str.replace('[^a-zA-Z ]', '', regex=True)
     df[var] = df[var].str.lower()
-    
-strip('speech')
-strip('constituency')
+
+denumerise('speech')
+declutter('constituency')
 
 # Drop speeches with less than 40 characters
 df['speechlen'] = df.speech.str.len()
