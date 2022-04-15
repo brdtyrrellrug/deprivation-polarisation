@@ -1,5 +1,13 @@
 This folder contains materials for the polarisation variable. Each script is included and the original dataset can be found here: https://evanodell.com/projects/datasets/hansard-data/
 
-All scripts were tested using Python 3.10
+Requirements:
+ - Python 3.10.x
+ - Python packages (see scripts)
+ - At least 10GB hard disk space
 
-# Instructions to reconstruct data
+Recommended:
+ - 16GB RAM
+
+Instructions:
+
+Run scripts in order 01_x, 02_x, ... and change variables as directed within them (these are paths).
