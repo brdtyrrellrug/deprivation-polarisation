@@ -28,8 +28,6 @@ data$polarisation <- data$polarisation - mean(data$polarisation)
 library(plm)
 lmpol <- plm(polarisation ~ deprivation + forbornpct + lnpopdensity + cabmins + election + govshare + I(govshare^2), 
              index=c("region", "year"), model="within", effect="twoways", data = data, weights=data$popshare)
-lmpolr <- plm(polarisation ~ deprivation + forbornpct + lnpopdensity + cabmins + election + conshare + I(conshare^2), 
-             index=c("region", "year"), model="within", effect="twoways", data = data, weights=data$popshare)
 
 # Results ----------------------------------------------------------------------
 
